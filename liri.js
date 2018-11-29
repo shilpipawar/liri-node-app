@@ -3,14 +3,15 @@ require("dotenv").config();
 var keys = require('./keys.js');
 //console.log(process.env);
 var axios = require("axios");
-var movie1 = process.argv[2];
+var spotifyAPI = require("node-spotify-api");
+//var movie1 = process.argv[2];
 var axios = require('axios');
 var dataUrl = "http://www.omdbapi.com/?apikey=" + process.env.SPOTIFY_API_KEY;
 var posterUrl = "http://img.omdbapi.com/?apikey=" + process.env.SPOTIFY_API_KEY;
-var movieName = movie1.split(" ").join("%20");
-var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + process.env.SPOTIFY_API_KEY; //6ce3d358
+//var movieName = movie1.split(" ").join("%20");
+//var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=" + process.env.SPOTIFY_API_KEY; //6ce3d358
 // This line is just to help us debug against the actual URL.
-console.log(queryUrl);
+// console.log(queryUrl);
 var searchParamKeys = ['s', 'type', 'y', 'r', 'page', 'callback', 'v'];
 var specificMovieParamKeys = ['t', 'i', 'plot', 'type', 'y', 'r', 'page', 'callback', 'v'];
 var validConfigKeys = {
@@ -46,9 +47,13 @@ if (command === "concert-this") {
 }
 
 //Add Function Defination////////////////////////////////
+function concertThis(){
+  console.log("Enter concertThis....");
+}
 function spotifyThis() {
-	var isInputNull = userInput === "" ? userInput = "CSS Suxxx" : userInput = userInput;
-	var spotify = new spotifyReq(keys.spotifyKeys);
+  console.log("Enter spotifyThis....");
+	var isInputNull = userInput === "" ? userInput = "The Sign" : userInput = userInput;
+	var spotify = new spotifyAPI(keys.spotify);
 
 	spotify.search({
 		type: "track",
@@ -135,30 +140,30 @@ function doWhatItSays() {
 /////////////////////////////////////////////////////////
 // Then create a request with axios to the queryUrl
 // ...
-axios.get(queryUrl).then(
-  function(response) {
-    // If the axios was successful...
-    // Then log the body from the site!
-    console.log(response.data);
-    console.log("Release Year: ", response.data.Year)
-  },
+// axios.get(queryUrl).then(
+//   function(response) {
+//     // If the axios was successful...
+//     // Then log the body from the site!
+//     console.log(response.data);
+//     console.log("Release Year: ", response.data.Year)
+//   },
 
-  function(error) {
-    if (error.response) {
-      // The request was made and the server responded with a status code
-      // that falls out of the range of 2xx
+//   function(error) {
+//     if (error.response) {
+//       // The request was made and the server responded with a status code
+//       // that falls out of the range of 2xx
       
-      console.log(error.response.data);
-      console.log(error.response.status);
-      console.log(error.response.headers);
-    } else if (error.request) {
-      // The request was made but no response was received
-      // `error.request` is an object that comes back with details pertaining to the error that occurred.
-      console.log(error.request);
-    } else {
-      // Something happened in setting up the request that triggered an Error
-      console.log("Error", error.message);
-    }
-    console.log(error.config);
-  }
-);
+//       console.log(error.response.data);
+//       console.log(error.response.status);
+//       console.log(error.response.headers);
+//     } else if (error.request) {
+//       // The request was made but no response was received
+//       // `error.request` is an object that comes back with details pertaining to the error that occurred.
+//       console.log(error.request);
+//     } else {
+//       // Something happened in setting up the request that triggered an Error
+//       console.log("Error", error.message);
+//     }
+//     console.log(error.config);
+//   }
+// );
