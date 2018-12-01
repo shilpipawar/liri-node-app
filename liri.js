@@ -24,11 +24,9 @@ var args = process.argv.slice(2);
 var command = args[0];
 var userInput = args.slice(1).join(" ");
 
-function Spotify(apiKey) {
-  APIKEY = apiKey;
-};
-var spotify = new Spotify(keys.spotify);
-// console.log(spotify.omdbAPI.apiKey);
+// function Spotify(apiKey) {
+//   APIKEY = apiKey;
+// };
 
 if (command === "concert-this") {
   concertThis();
@@ -45,6 +43,42 @@ if (command === "concert-this") {
 //Add Function Defination////////////////////////////////
 function concertThis() {
   console.log("Enter concertThis....");
+  var isInputNull = userInput === "" ? userInput = "Shawn Mendes" : userInput = userInput;
+  var queryUrl = "https://rest.bandsintown.com/artists/" + isInputNull + "/events?app_id=" + keys.bandAPI.apiKey + "&date=upcoming"
+  axios.get(queryUrl).then(
+    function (response) {
+      //console.log(response);
+      console.log("Name of the venue: " + response.data[0].artist_id);
+      console.log("Venue location: " + response.data[0].datetime);
+      console.log("Date of the Event: " + response.data[0].imdbRating);
+      //Enable log file
+      fs.appendFile("log.txt", "\n" + "Appending this concert information: " +
+        "\n--------------------------------------------------------------" +
+        "\n" + response.data[0].artist_id + "\n" + response.data[0].datetime +
+        "\n" + response.data[0].imdbRating +
+        "\n--------------------------------------------------------------", function (err) {
+          if (err) {
+            console.log(err);
+          }
+        })
+    }, function (error) {
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      } else if (error.request) {
+        // The request was made but no response was received
+        // `error.request` is an object that comes back with details pertaining to the error that occurred.
+        console.log(error.request);
+      } else {
+        // Something happened in setting up the request that triggered an Error
+        console.log("Error", error.message);
+      }
+      console.log(error.config);
+    }
+  );
 }
 function spotifyThis() {
   console.log("Enter spotifyThis....");
@@ -66,10 +100,12 @@ function spotifyThis() {
     }
 
     fs.appendFile("log.txt", "\nAppending this song and artist data: " +
+      "\n--------------------------------------------------------------" +
       "\n" + data.tracks.items[0].album.artists[0].name +
       "\n" + data.tracks.items[0].name +
       "\n" + data.tracks.items[0].album.external_urls.spotify +
-      "\n" + data.tracks.items[0].album.name, function (err) {
+      "\n" + data.tracks.items[0].album.name +
+      "\n--------------------------------------------------------------", function (err) {
         if (err) {
           console.log(err);
         }
@@ -93,15 +129,17 @@ function movieThis() {
       console.log("Plot: " + response.data.Plot);
       console.log("Actors: " + response.data.Actors);
       //Enable log file
-      fs.appendFile("log.txt", "\n" + "Appending this movie information: " + 
-			"\n" + response.data.Title + "\n" + response.data.Year + 
-			"\n" + response.data.imdbRating + "\n" + response.data.rottenExists +
-			"\n" + response.data.Country + "\n" + response.data.Language +
-			"\n" + response.data.Plot + "\n" + response.data.Actors, function(err) {
-				if (err) {
-					console.log(err);
-				}
-			})
+      fs.appendFile("log.txt", "\n" + "Appending this movie information: " +
+        "\n--------------------------------------------------------------" +
+        "\n" + response.data.Title + "\n" + response.data.Year +
+        "\n" + response.data.imdbRating + "\n" + response.data.rottenExists +
+        "\n" + response.data.Country + "\n" + response.data.Language +
+        "\n" + response.data.Plot + "\n" + response.data.Actors +
+        "\n--------------------------------------------------------------", function (err) {
+          if (err) {
+            console.log(err);
+          }
+        })
     }, function (error) {
       if (error.response) {
         // The request was made and the server responded with a status code
@@ -131,10 +169,10 @@ function doWhatItSays() {
       userInput = dataArr[1];
       command = dataArr[0];
 
-      if (command === "my-tweets") {
-        tweetTweet();
-      } else if (command === "spotify-this-song") {
+      if (command === "spotify-this-song") {
         spotifyThis();
+      } else if (command === "concert-this") {
+        concertThis();
       } else {
         movieThis();
       }
@@ -147,33 +185,4 @@ function doWhatItSays() {
     })
   });
 }
-/////////////////////////////////////////////////////////
-// Then create a request with axios to the queryUrl
-// ...
-// axios.get(queryUrl).then(
-//   function(response) {
-//     // If the axios was successful...
-//     // Then log the body from the site!
-//     console.log(response.data);
-//     console.log("Release Year: ", response.data.Year)
-//   },
-
-//   function(error) {
-//     if (error.response) {
-//       // The request was made and the server responded with a status code
-//       // that falls out of the range of 2xx
-
-//       console.log(error.response.data);
-//       console.log(error.response.status);
-//       console.log(error.response.headers);
-//     } else if (error.request) {
-//       // The request was made but no response was received
-//       // `error.request` is an object that comes back with details pertaining to the error that occurred.
-//       console.log(error.request);
-//     } else {
-//       // Something happened in setting up the request that triggered an Error
-//       console.log("Error", error.message);
-//     }
-//     console.log(error.config);
-//   }
-// );
+////////END///////////////////////////////

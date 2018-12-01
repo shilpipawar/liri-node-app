@@ -9,5 +9,8 @@ exports.spotify = {
 exports.omdbAPI = {
   apiKey:process.env.SPOTIFY_API_KEY
 }
+exports.bandAPI = {
+  apiKey:process.env.BAND_API_KEY
+}
 //module.exports = spotify;
 console.log('End Loading keys.js..');
