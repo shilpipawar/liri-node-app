@@ -67,7 +67,7 @@ var spotifyAPI = require("node-spotify-api");
 - command to access the feature for concert-this
 ```node liri.js spotify-this-song '<song name here>```
 - Screen Shot:
-  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/do-what-it-says.png?raw=true "movie-this")
+  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/spotify-this-song.png?raw=true "spotify-this-song")
 
 3. movie-this
   - This will output the following information to your terminal/bash window:
@@ -92,7 +92,7 @@ var spotifyAPI = require("node-spotify-api");
 - command to access the feature for concert-this
 ```node liri.js do-what-it-says```
  - Screen Shot:
-  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/spotify-this-song.png?raw=true "movie-this")
+  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/do-what-it-says.png?raw=true "do-what-it-says")
 
 ## License
 This project is licensed under the MIT License - see the [L
