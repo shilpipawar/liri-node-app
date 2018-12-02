@@ -79,7 +79,7 @@ var spotifyAPI = require("node-spotify-api");
   ```node liri.js movie-this '<movie name here>'```
 
   - Screen Shot:
-  ![image](//https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/do-what-it-says.png?raw=true "movie-this")
+  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/movie-this.png?raw=true "movie-this")
 
 4. do-what-it-says
 - Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
