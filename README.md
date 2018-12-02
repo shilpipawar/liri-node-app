@@ -77,8 +77,9 @@ var spotifyAPI = require("node-spotify-api");
       * Actors in the movie.
   - command to access the feature for concert-this
   ```node liri.js movie-this '<movie name here>'```
-  Screen Shot:
-  ![Alt text](/ScreenShots/movie-this.jpg?raw=true "movie-this")
+
+  - Screen Shot:
+  ![ScreenShot](/https://github.com/shilpipawar/liri-node-app/tree/master/ScreenShots/movie-this.png?raw=true "movie-this")
 
 4. do-what-it-says
 - Using the fs Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
