@@ -4,7 +4,6 @@ var keys = require('./keys.js');
 var moment = require('moment');
 var axios = require("axios");
 var spotifyAPI = require("node-spotify-api");
-var axios = require('axios');
 var fs = require("fs");
 var args = process.argv.slice(2);
 var command = args[0];
