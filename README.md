@@ -53,6 +53,8 @@ var spotifyAPI = require("node-spotify-api");
     * Date of the Event ("MM/DD/YYYY")
 - command to access the feature for concert-this
 ```node liri.js concert-this <artist/band name here>```
+- Screen Shot:
+  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/spotify-this-song.png?raw=true "concert-this")
 
 ## concertThis()
 
@@ -64,6 +66,8 @@ var spotifyAPI = require("node-spotify-api");
     * The album that the song is from
 - command to access the feature for concert-this
 ```node liri.js spotify-this-song '<song name here>```
+- Screen Shot:
+  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/spotify-this-song.png?raw=true "movie-this")
 
 3. movie-this
   - This will output the following information to your terminal/bash window:
@@ -87,6 +91,8 @@ var spotifyAPI = require("node-spotify-api");
     * Edit the text in random.txt to test out the feature for movie-this and concert-this.
 - command to access the feature for concert-this
 ```node liri.js do-what-it-says```
+ - Screen Shot:
+  ![image](https://github.com/shilpipawar/liri-node-app/blob/master/ScreenShots/spotify-this-song.png?raw=true "movie-this")
 
 ## License
 This project is licensed under the MIT License - see the [L
