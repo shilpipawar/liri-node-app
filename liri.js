@@ -1,32 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////
 require("dotenv").config();
 var keys = require('./keys.js');
-//console.log(process.env);
+var moment = require('moment');
 var axios = require("axios");
 var spotifyAPI = require("node-spotify-api");
-//var movie1 = process.argv[2];
 var axios = require('axios');
-var dataUrl = "http://www.omdbapi.com/?apikey=" + process.env.SPOTIFY_API_KEY;
-var posterUrl = "http://img.omdbapi.com/?apikey=" + process.env.SPOTIFY_API_KEY;
-var searchParamKeys = ['s', 'type', 'y', 'r', 'page', 'callback', 'v'];
-var specificMovieParamKeys = ['t', 'i', 'plot', 'type', 'y', 'r', 'page', 'callback', 'v'];
-var validConfigKeys = {
-  type: true,
-  plot: true,
-  page: true,
-  r: true,
-  callback: true,
-  v: true
-}
-
 var fs = require("fs");
 var args = process.argv.slice(2);
 var command = args[0];
 var userInput = args.slice(1).join(" ");
-
-// function Spotify(apiKey) {
-//   APIKEY = apiKey;
-// };
 
 if (command === "concert-this") {
   concertThis();
@@ -49,7 +31,7 @@ function concertThis() {
     function (response) {
       //console.log(response);
       console.log("Name of the venue: " + response.data[0].artist_id);
-      console.log("Venue location: " + response.data[0].datetime);
+      console.log("Venue location: " + moment(response.data[0].datetime).format("MMDDYYYY"));
       console.log("Date of the Event: " + response.data[0].imdbRating);
       //Enable log file
       fs.appendFile("log.txt", "\n" + "Appending this concert information: " +
