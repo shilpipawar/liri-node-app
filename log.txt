@@ -181,3 +181,103 @@ Appending this concert information:
 2019-03-18T19:00:44
 undefined
 --------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+undefined
+undefined
+undefined
+--------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+1120421
+2019-03-18T19:00:44
+undefined
+--------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+8371462
+2018-12-01T19:30:00
+undefined
+--------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+8371462
+2018-12-01T19:30:00
+undefined
+--------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+8371462
+2018-12-01T19:30:00
+undefined
+--------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+8371462
+2018-12-01T19:30:00
+undefined
+--------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+8371462
+2018-12-01T19:30:00
+undefined
+--------------------------------------------------------------
+Appending this movie information: 
+--------------------------------------------------------------
+Mr. Nobody
+2009
+7.9
+undefined
+Belgium, Germany, Canada, France, USA, UK
+English, Mohawk
+A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+--------------------------------------------------------------
+Appending this movie information: 
+--------------------------------------------------------------
+Hulk
+2003
+5.7
+undefined
+USA
+English, Spanish
+Bruce Banner, a genetics researcher with a tragic past, suffers an accident that causes him to transform into a raging green monster when he gets angry.
+Eric Bana, Jennifer Connelly, Sam Elliott, Josh Lucas
+--------------------------------------------------------------
+Appending this song and artist data: 
+--------------------------------------------------------------
+Harry Styles
+Sign of the Times
+https://open.spotify.com/album/1FZKIm3JVDCxTchXDo5jOV
+Harry Styles
+--------------------------------------------------------------
+Appending this song and artist data: 
+--------------------------------------------------------------
+Various Artists
+Go Hard or Go Home
+https://open.spotify.com/album/7hTMaPfK488vRcC1Ar4bOm
+Furious 7: Original Motion Picture Soundtrack
+--------------------------------------------------------------User engaged the random file.
+Appending this movie information: 
+--------------------------------------------------------------
+Hulk
+2003
+5.7
+undefined
+USA
+English, Spanish
+Bruce Banner, a genetics researcher with a tragic past, suffers an accident that causes him to transform into a raging green monster when he gets angry.
+Eric Bana, Jennifer Connelly, Sam Elliott, Josh Lucas
+--------------------------------------------------------------User engaged the random file.
+Appending this movie information: 
+--------------------------------------------------------------
+Hulk
+2003
+5.7
+undefined
+USA
+English, Spanish
+Bruce Banner, a genetics researcher with a tragic past, suffers an accident that causes him to transform into a raging green monster when he gets angry.
+Eric Bana, Jennifer Connelly, Sam Elliott, Josh Lucas
+--------------------------------------------------------------
