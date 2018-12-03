@@ -28,7 +28,7 @@ function concertThis() {
   var queryUrl = "https://rest.bandsintown.com/artists/" + isInputNull + "/events?app_id=" + keys.bandAPI.apiKey + "&date=upcoming"
   axios.get(queryUrl).then(
     function (response) {
-       var data = JSON.parse(response.data);
+       var data = response.data;
       //  var location = {
       //    Name:name,
       //    City:city,

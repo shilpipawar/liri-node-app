@@ -281,3 +281,9 @@ English, Spanish
 Bruce Banner, a genetics researcher with a tragic past, suffers an accident that causes him to transform into a raging green monster when he gets angry.
 Eric Bana, Jennifer Connelly, Sam Elliott, Josh Lucas
 --------------------------------------------------------------
+Appending this concert information: 
+--------------------------------------------------------------
+8371462
+2018-12-08T19:30:00
+undefined
+--------------------------------------------------------------
