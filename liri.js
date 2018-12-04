@@ -28,16 +28,11 @@ function concertThis() {
   var queryUrl = "https://rest.bandsintown.com/artists/" + isInputNull + "/events?app_id=" + keys.bandAPI.apiKey + "&date=upcoming"
   axios.get(queryUrl).then(
     function (response) {
-       var data = response.data;
-      //  var location = {
-      //    Name:name,
-      //    City:city,
-      //    Region:region,
-      //    Country:country
-      //  }
-       console.log(data);
-      console.log("Name of the venue: " + data.name);
-      console.log("Venue location: " + response.data[0].VenueData);
+      var data = response.data;
+      //console.log(data);
+      console.log("Name of the venue: " + data[0].venue.name);
+      console.log("Venue location: " + "\nCity: " + response.data[0].venue.city
+        + "\nCountry: " + response.data[0].venue.country);
       console.log("Date of the Event: " + moment(response.data[0].datetime).format("MMDDYYYY"));
       //Enable log file
       fs.appendFile("log.txt", "\n" + "Appending this concert information: " +
